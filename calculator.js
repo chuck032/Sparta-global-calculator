@@ -1,8 +1,7 @@
 
-value3= [];
-i = value3.length
+i = 0;
 while (i < 1) { //loop that will continue running until a single calculation is completed
-  var typeOfCalculator = prompt("Would you like to use (b)basic or (a)advanced ?")
+  var typeOfCalculator = prompt("Which calculator would you like to use (b)basic, (a)advanced, bmi or trip?")
   if (typeOfCalculator == "basic" || typeOfCalculator == "b") {
     var value1 = parseInt(prompt('enter first value'));
     var value2 = parseInt(prompt('enter the second value'));
@@ -16,35 +15,40 @@ while (i < 1) { //loop that will continue running until a single calculation is 
         //addition
         case "a":
         case "add" :
-          value3 = console.log(value1 + value2);
+          var value3 = value1 + value2;
+          alert(value3);
           i++;
           break;
 
         //multiplication
         case "multiply":
         case "m":
-          value3 = console.log(value1 * value2);
+          var value3 = value1 * value2;
+          alert(value3);
           i++;
           break;
 
         //division
         case "divide":
         case "d":
-          value3 = console.log(value1 / value2);
+          var value3 = value1 / value2;
+          alert(value3);
           i++;
           break;
 
         //subtraction
         case "subtract":
         case "s":
-          value3 = console.log(value1 - value2);
+          var value3 = value1 - value2;
+          alert(value3);
           i++;
           break;
 
         //modulus
         case "modulus":
         case "mod":
-          value3 = console.log(value1 % value2);
+          var value3 = value1 % value2;
+          alert(value3);
           i++;
           break;
 
@@ -65,7 +69,8 @@ while (i < 1) { //loop that will continue running until a single calculation is 
           var value2 = parseInt(prompt('enter power value'));
           console.log(value1);
           console.log(value2);
-          value3 = console.log(Math.pow(value1,value2));
+          var value3 = Math.pow(value1,value2);
+          alert(value3);
           i++;
           break;
 
@@ -74,8 +79,8 @@ while (i < 1) { //loop that will continue running until a single calculation is 
         case "sq":
           var value1 = parseInt(prompt('enter value'));
           console.log(value1);
-          value2 = Math.sqrt(value1);
-          value3 = console.log(value2);
+          var value2 = Math.sqrt(value1);
+          alert(value2);
           i++;
           break;
 
@@ -85,57 +90,68 @@ while (i < 1) { //loop that will continue running until a single calculation is 
       }
 
     // invalid action when choosing between basic and advanced
-    } else {
-      alert("Please enter either basic or advanced.");
     }
-}
 
 
 // Bonus Task
 // BMI calculator
-var system = prompt("Do you use (M)metric or (I)imperial?");
+else if (typeOfCalculator == "bmi") {
 
-//metric system
-if (system == "m" || system == "metric") {
-  var weight = parseFloat(prompt('please enter your weight in kgs'));
-  var height = parseFloat(prompt('please enter height in metres'));
-  console.log(weight);
-  console.log(height);
-  console.log("Your BMI is " + (weight / height) / height);
+  var system = prompt("Do you use (M)metric or (I)imperial?");
 
-//imperial system
-} else if (system == "i" || system == "imperial") {
-  var weight = parseFloat(prompt('please enter your weight in pounds'));
-  var height = parseFloat(prompt('please enter height in inches'));
-  console.log(weight);
-  console.log(height);
-  console.log("Your BMI is " + (weight *703)/ Math.pow(height,2));
+  //metric system
+  if (system == "m" || system == "metric") {
+    var weight = parseFloat(prompt('please enter your weight in kgs'));
+    var height = parseFloat(prompt('please enter height in metres'));
+    console.log(weight);
+    console.log(height);
+    alert("Your BMI is " + (weight / height) / height);
+    i++;
 
- //incorrect value
-} else{
-  alert("Incorrect entry, please choose between metric or imperial")
+  //imperial system
+  } else if (system == "i" || system == "imperial") {
+    var weight = parseFloat(prompt('please enter your weight in pounds'));
+    var height = parseFloat(prompt('please enter height in inches'));
+    console.log(weight);
+    console.log(height);
+    alert("Your BMI is " + (weight *703)/ Math.pow(height,2));
+    i++;
+
+   //incorrect value
+  } else{
+    alert("Incorrect entry, please choose between metric or imperial")
+  }
 }
-
 
 //Super Bonus Task
 //trip calculator
-var distance = parseFloat(prompt("Please enter the miles you will travel"))
-var fuelEfficiency = parseFloat(prompt("Please enter mpg"))
-var costPerGallon = parseFloat(prompt("Please enter your cost per gallon"))
-var speed = parseFloat(prompt("Please enter your mph"))
+else if (typeOfCalculator == "trip") {
 
-console.log(distance);
-console.log(fuelEfficiency);
-console.log(costPerGallon);
-console.log(speed);
+  var distance = parseFloat(prompt("Please enter the miles you will travel"))
+  var fuelEfficiency = parseFloat(prompt("Please enter mpg"))
+  var costPerGallon = parseFloat(prompt("Please enter your cost per gallon"))
+  var speed = parseFloat(prompt("Please enter your mph"))
 
-var time = parseFloat(distance/speed);
+  console.log(distance);
+  console.log(fuelEfficiency);
+  console.log(costPerGallon);
+  console.log(speed);
 
-if (speed > 60 && fuelEfficiency > 0) {
-  fuelEfficiency = fuelEfficiency - ((speed - 60) *2);
-  var cost = parseFloat(fuelEfficiency*costPerGallon)
-  console.log("Your trip will take " + time + "hours and cost " + cost);
-} else {
-  var cost = parseFloat(fuelEfficiency*costPerGallon)
-  console.log("Your trip will take " + time + "hours and cost " + cost);
+  var time = parseFloat(distance/speed);
+
+  if (speed > 60 && fuelEfficiency > 0 && fuelEfficiency > speed) {
+    fuelEfficiency = fuelEfficiency - ((speed - 60) *2);
+    var cost = parseFloat(fuelEfficiency*costPerGallon)
+    alert("Your trip will take " + time + " hours and cost " + cost);
+    i++;
+  } else {
+    var cost = parseFloat(fuelEfficiency*costPerGallon)
+    alert("Your trip will take " + time + " hours and cost " + cost);
+    i++;
+  }
+}
+
+else {
+  alert("Please enter either basic or advanced.");
+}
 }
