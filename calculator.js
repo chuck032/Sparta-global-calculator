@@ -16,7 +16,7 @@ while (i < 1) { //loop that will continue running until a single calculation is 
         case "a":
         case "add" :
           var value3 = value1 + value2;
-          alert(value3);
+          alert(value1 + " + " + value2 + " = " + value3);
           i++;
           break;
 
@@ -24,7 +24,7 @@ while (i < 1) { //loop that will continue running until a single calculation is 
         case "multiply":
         case "m":
           var value3 = value1 * value2;
-          alert(value3);
+          alert(value1 + " x " + value2 + " = " + value3);
           i++;
           break;
 
@@ -32,7 +32,7 @@ while (i < 1) { //loop that will continue running until a single calculation is 
         case "divide":
         case "d":
           var value3 = value1 / value2;
-          alert(value3);
+          alert(value1 + " / " + value2 + " = " + value3);
           i++;
           break;
 
@@ -40,7 +40,7 @@ while (i < 1) { //loop that will continue running until a single calculation is 
         case "subtract":
         case "s":
           var value3 = value1 - value2;
-          alert(value3);
+          alert(value1 + " - " + value2 + " = " + value3);
           i++;
           break;
 
@@ -48,7 +48,7 @@ while (i < 1) { //loop that will continue running until a single calculation is 
         case "modulus":
         case "mod":
           var value3 = value1 % value2;
-          alert(value3);
+          alert(value1 + " mod " + value2 + " = " + value3);
           i++;
           break;
 
@@ -70,7 +70,7 @@ while (i < 1) { //loop that will continue running until a single calculation is 
           console.log(value1);
           console.log(value2);
           var value3 = Math.pow(value1,value2);
-          alert(value3);
+          alert(value1 + " ^ " + value2 + " = " + value3);
           i++;
           break;
 
@@ -80,7 +80,7 @@ while (i < 1) { //loop that will continue running until a single calculation is 
           var value1 = parseInt(prompt('enter value'));
           console.log(value1);
           var value2 = Math.sqrt(value1);
-          alert(value2);
+          alert("sqrt(" + value2 + ") ");
           i++;
           break;
 
