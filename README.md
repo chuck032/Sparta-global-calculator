@@ -1,10 +1,13 @@
 # Sparta-global-calculator
 
+Instructions for use:
+
+* To use this project git clone the repository to your computer
+* Enter the project and open the html file. To view the code you can open the html file in a text editor.
+
 ## Calculator
 
-
-
-Tasks
+My task for this project was:
 - Write a command line calculator application that has different settings, (b)asic, (a)dvanced, bmi calculator and trip calculator.
 - The calculator will ask the user for which calculator they want to use
 - Then ask the user for the numbers to operate on.
