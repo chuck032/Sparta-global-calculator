@@ -2,17 +2,17 @@
 
 Instructions for use:
 
-* To use this project git clone the repository to your computer
+* To use this project git clone the repository to your computer.
 * Enter the project and open the html file. To view the code you can open the html file in a text editor.
 
 ## Calculator
 
 My task for this project was:
 - Write a command line calculator application that has different settings, (b)asic, (a)dvanced, bmi calculator and trip calculator.
-- The calculator will ask the user for which calculator they want to use
+- The calculator will ask the user for which calculator they want to use.
 - Then ask the user for the numbers to operate on.
 - Then work out what to do with the numbers, depending on what operation they choose.
-- Finally create a loop that loops continuously until they complete a single calculation
+- Finally create a loop that loops continuously until they complete a single calculation.
 
 Basic calculator functions:
 - Addition
