@@ -152,6 +152,6 @@ else if (typeOfCalculator == "trip") {
 }
 
 else {
-  alert("Please enter either basic or advanced.");
+  alert("Please enter (b)asic, (a)dvanced, bmi or trip.");
 }
 }
